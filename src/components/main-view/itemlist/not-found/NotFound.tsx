@@ -1,17 +1,18 @@
-import React from 'react';
+import React from 'react'
+import styled from 'styled-components'
 import {
   Text,
   DangerIcon,
   // @ts-ignore
-} from 'evergreen-ui';
+} from 'evergreen-ui'
 
-import { ItemsLayout } from '../ItemsLayout';
+import { ItemsLayout } from '../ItemsLayout'
 
-const NotFoundElement = ItemsLayout.extend`
+const NotFoundElement = styled(ItemsLayout)`
   height: 210px;
   font-size: 16px;
   text-align: center;
-`;
+`
 
 export const NotFound: React.SFC<{ value: string }> = ({ value }) => (
   <NotFoundElement>
@@ -26,4 +27,4 @@ export const NotFound: React.SFC<{ value: string }> = ({ value }) => (
       <p>search '{value}' in google.</p>
     </Text>
   </NotFoundElement>
-);
+)
